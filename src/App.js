@@ -1,20 +1,16 @@
 import React from 'react';
-import {Switch, BrowserRouter, Link, Route} from 'react-router-dom'
+import {Switch, BrowserRouter, Route} from 'react-router-dom'
+
+import Nav from './components/_layout/nav';
 
 const App = () =>{
 
     return (
         <BrowserRouter>
             <>
-                <nav>
-                    <ul>
-                        <li> <Link to="/sign-in">Sign in</Link></li>
-                        <li> <Link to="/sign-up">Sign up</Link></li>
-                        <li> <Link to="/manage/links/create">Create Link</Link></li>
-                        <li> <Link to="/manage/links/edit">Edit Link</Link></li>
-                        <li> <Link to="/manage/links">Links</Link></li>
-                    </ul>
-                </nav>
+            
+                <Nav />
+
                 <Switch>
                     <Route path='/sign-in'> <h1>Sign in</h1> </Route>
                     <Route path='/sign-up'> <h1>Sign up</h1> </Route>
